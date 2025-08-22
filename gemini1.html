@@ -65,7 +65,7 @@
             font-size: 2rem;
             font-weight: 700;
             border-radius: 8px;
-            background-color: #fff;
+            background-color: #eefca3;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
             user-select: none;
@@ -106,7 +106,7 @@
             font-size: 1.1rem;
             font-weight: 600;
             color: #360d0d;
-            background-color: #91af4c;
+            background-color: #cfee86;
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -115,7 +115,7 @@
         }
 
         .generate-btn:hover {
-            background-color: #a07145;
+            background-color: #e7c6a7;
             transform: translateY(-2px);
         }
 
@@ -164,7 +164,7 @@
 <body>
 
     <h1 class="text-3xl md:text-4xl font-bold mb-8">LUCKY NUMBER GENERATOR</h1>
-    <a href="index.html">HOME</a>
+    <a href="index.html"><span style="font-size: 20px; color: blue; font-weight: bold;">HOME</span></a>
     <div class="container">
         <div class="numbers-row">
             <!-- The first six number boxes with labels -->
@@ -199,8 +199,11 @@
             </div>
         </div>
         
-        <button id="generateBtn" class="generate-btn">Generate Numbers</button>
-        <p id="thankYouMessage"></p>
+        <button id="generateBtn" class="generate-btn">Generate Numbers <Br> 
+            <span  style="font-size: 8px; color: blue;"> &#169Rolando Ramirez</span>
+        </button>
+
+        <p id="thankYouMessage"style="cursor: pointer;"></p>
     </div>
 
     <script>
@@ -216,8 +219,8 @@
             "GOD is always good!",
             "Praise The Lord!",
             "Bless Us All!",
-            "Hallelujah!Praise the Lord",
-            "Thanks to all the Blessing GOD!",
+            "Hallelujah! Praise the Lord",
+            "Thanks GOD for all the Blessing!",
             "May The Blessing of GOD be with Us All!",
             "Lucky Day, Lucky Number!",
             'May the odds be ever in our favor...',
