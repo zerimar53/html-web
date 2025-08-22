@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello Visitor!</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url(back.jpg);
+    background-size: cover; */
+    /* background-color: lightblue; */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url(back.jpg);
+    background-size: cover;
+  }
+  #name {
+    font-size: 3em;
+    margin-top: 50px;
+    color: green;
+  }
+  #clock {
+    font-size: 12em;
+    margin-top: 20px;
+    color: rgb(241, 25, 14);
+    /* color: rgb(41, 248, 9); */
+  }
+  #date {
+    font-size: 7em;
+    margin-top: 20px;
+    color: aqua;
+  }
+</style>
+</head>
+<body>
+  
+  <div id="name">Rolando Ramirez</div><a href="gemini1.html"><span style="color: blue;">🎲 CLICK THIS! To Generate Lucky Number!</a></span>
+  
+  <div id="clock"></div>
+  <div id="date"></div>
+  
+
+<script>
+function updateTime() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var meridiem = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12 || 12;
+  document.getElementById('clock').textContent = hours + ':' + pad(minutes) + ':' + pad(seconds) + ' ' + meridiem;
+}
+
+function pad(number) { 
+  return (number < 10 ? '0' : '') + number;
+}
+
+function updateDate() {
+  var now = new Date();
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var year = now.getFullYear();
+  var month = months[now.getMonth()];
+  var date = now.getDate();
+  var day = days[now.getDay()];
+  document.getElementById('date').textContent = pad(date) + month + year +' '+ day;
+}
+
+updateTime();
+updateDate();
+setInterval(updateTime, 1000);
+setInterval(updateDate, 60000);
+</script>
+</body>
+</html>

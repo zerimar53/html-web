@@ -1,0 +1,8 @@
+body{
+  background-image: url(back.jpg);
+  background-size: cover;
+}
+
+#clock {
+  color: rgb(241, 25, 14);
+}
